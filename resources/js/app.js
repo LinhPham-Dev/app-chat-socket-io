@@ -23,7 +23,6 @@ const app = new Vue({
             try {
                 const response = await axios.get("/getUserLogin");
                 this.currentUserLogin = response.data;
-                console.log(this.currentUserLogin);
             } catch (error) {
                 console.log(error);
             }

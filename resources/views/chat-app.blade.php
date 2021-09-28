@@ -8,14 +8,18 @@
     <title>Chat App Socket Io</title>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" type="text/css"
-        rel="stylesheet" </head> <body>
+        rel="stylesheet">
+</head>
+
+<body>
     <section id="app">
         <chat-app></chat-app>
     </section>
 
+    <script src="http://localhost:6001/socket.io/socket.io.js"></script>
     <script src="/js/app.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    </body>
+</body>
 
 </html>

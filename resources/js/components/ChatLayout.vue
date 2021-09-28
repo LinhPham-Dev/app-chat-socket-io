@@ -162,6 +162,12 @@ export default {
     },
     created() {
         this.loadMessage();
+        Echo.channel("chatroom").listen("MessagePosted", data => {
+            console.log(data);
+            let message = data.message;
+            message.user = data.user;
+            this.list_messages.push(message);
+        });
     },
     methods: {
         async loadMessage() {
