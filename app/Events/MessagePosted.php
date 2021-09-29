@@ -12,7 +12,7 @@ use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
 
-class MessagePosted
+class MessagePosted implements ShouldBroadcast
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
@@ -37,11 +37,14 @@ class MessagePosted
      */
     public function broadcastOn()
     {
-        return new Channel('chatroom');
+        return new Channel('ccccc');
     }
 
     public function broadcastWith()
     {
-        return ['title' => 'Send message successfully'];
+        return [
+            'message' => $this->message,
+            'user' => $this->user
+        ];
     }
 }

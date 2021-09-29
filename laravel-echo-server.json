@@ -1,5 +1,5 @@
 {
-    "authHost": "http://localhost:8000",
+    "authHost": "http://app-chat-socket-io.test",
     "authEndpoint": "/broadcasting/auth",
     "clients": [
         {

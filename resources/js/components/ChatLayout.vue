@@ -3,112 +3,7 @@
         <h2 class="my-3 text-center">Laravel Chat Realtime Socket Io.</h2>
         <div class="messaging">
             <div class="inbox_msg">
-                <div class="inbox_people">
-                    <div class="headind_srch">
-                        <div class="recent_heading">
-                            <h4>Message</h4>
-                        </div>
-                        <div class="srch_bar">
-                            <div class="stylish-input-group">
-                                <input
-                                    type="text"
-                                    class="search-bar"
-                                    placeholder="Search"
-                                />
-                                <span class="input-group-addon">
-                                    <button type="button">
-                                        <i
-                                            class="fa fa-search"
-                                            aria-hidden="true"
-                                        ></i>
-                                    </button>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="inbox_chat">
-                        <div class="chat_list active_chat">
-                            <div class="chat_people">
-                                <div class="chat_img">
-                                    <img
-                                        src="https://ptetutorials.com/images/user-profile.png"
-                                        alt="sunil"
-                                    />
-                                </div>
-                                <div class="chat_ib">
-                                    <h5>
-                                        Sunil Rajput
-                                        <span class="chat_date">Dec 25</span>
-                                    </h5>
-                                    <p>
-                                        Test, which is a new approach to have
-                                        all solutions astrology under one roof.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="chat_list">
-                            <div class="chat_people">
-                                <div class="chat_img">
-                                    <img
-                                        src="https://ptetutorials.com/images/user-profile.png"
-                                        alt="sunil"
-                                    />
-                                </div>
-                                <div class="chat_ib">
-                                    <h5>
-                                        Sunil Rajput
-                                        <span class="chat_date">Dec 25</span>
-                                    </h5>
-                                    <p>
-                                        Test, which is a new approach to have
-                                        all solutions astrology under one roof.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="chat_list">
-                            <div class="chat_people">
-                                <div class="chat_img">
-                                    <img
-                                        src="https://ptetutorials.com/images/user-profile.png"
-                                        alt="sunil"
-                                    />
-                                </div>
-                                <div class="chat_ib">
-                                    <h5>
-                                        Sunil Rajput
-                                        <span class="chat_date">Dec 25</span>
-                                    </h5>
-                                    <p>
-                                        Test, which is a new approach to have
-                                        all solutions astrology under one roof.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="chat_list">
-                            <div class="chat_people">
-                                <div class="chat_img">
-                                    <img
-                                        src="https://ptetutorials.com/images/user-profile.png"
-                                        alt="sunil"
-                                    />
-                                </div>
-                                <div class="chat_ib">
-                                    <h5>
-                                        Sunil Rajput
-                                        <span class="chat_date">Dec 25</span>
-                                    </h5>
-                                    <p>
-                                        Test, which is a new approach to have
-                                        all solutions astrology under one roof.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <!-- <InboxPeople /> -->
                 <div class="mesgs">
                     <!-- List Message -->
                     <div class="msg_history">
@@ -148,10 +43,12 @@
 </template>
 
 <script>
+import InboxPeople from "./InboxPeople.vue";
 import MessageItem from "./MessageItem";
 
 export default {
     components: {
+        InboxPeople,
         MessageItem
     },
     data() {
@@ -162,11 +59,11 @@ export default {
     },
     created() {
         this.loadMessage();
-        Echo.channel("chatroom").listen("MessagePosted", data => {
-            console.log(data);
-            let message = data.message;
-            message.user = data.user;
-            this.list_messages.push(message);
+        Echo.channel("ccccc").listen("MessagePosted", data => {
+            console.log("DCM");
+            // let message = data.message;
+            // message.user = data.user;
+            // this.list_messages.push(message);
         });
     },
     methods: {
@@ -329,7 +226,8 @@ img {
 .mesgs {
     float: left;
     padding: 30px 15px 0 25px;
-    width: 60%;
+    /* width: 60%; */
+    width: 100%;
 }
 
 .sent_msg p {

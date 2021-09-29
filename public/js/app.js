@@ -2078,7 +2078,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _MessageItem__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MessageItem */ "./resources/js/components/MessageItem.vue");
+/* harmony import */ var _InboxPeople_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./InboxPeople.vue */ "./resources/js/components/InboxPeople.vue");
+/* harmony import */ var _MessageItem__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./MessageItem */ "./resources/js/components/MessageItem.vue");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -2129,115 +2130,12 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
-    MessageItem: _MessageItem__WEBPACK_IMPORTED_MODULE_1__["default"]
+    InboxPeople: _InboxPeople_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
+    MessageItem: _MessageItem__WEBPACK_IMPORTED_MODULE_2__["default"]
   },
   data: function data() {
     return {
@@ -2246,20 +2144,16 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     };
   },
   created: function created() {
-    var _this = this;
-
     this.loadMessage();
-    Echo.channel("chatroom").listen("MessagePosted", function (data) {
-      console.log(data);
-      var message = data.message;
-      message.user = data.user;
-
-      _this.list_messages.push(message);
+    Echo.channel("ccccc").listen("MessagePosted", function (data) {
+      console.log("DCM"); // let message = data.message;
+      // message.user = data.user;
+      // this.list_messages.push(message);
     });
   },
   methods: {
     loadMessage: function loadMessage() {
-      var _this2 = this;
+      var _this = this;
 
       return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
         var response;
@@ -2273,7 +2167,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
               case 3:
                 response = _context.sent;
-                _this2.list_messages = response.data;
+                _this.list_messages = response.data;
                 _context.next = 10;
                 break;
 
@@ -2291,7 +2185,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       }))();
     },
     sendMessage: function sendMessage() {
-      var _this3 = this;
+      var _this2 = this;
 
       return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2() {
         var response;
@@ -2302,15 +2196,15 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 _context2.prev = 0;
                 _context2.next = 3;
                 return axios.post("/messages", {
-                  message: _this3.message
+                  message: _this2.message
                 });
 
               case 3:
                 response = _context2.sent;
 
-                _this3.list_messages.push(response.data.message);
+                _this2.list_messages.push(response.data.message);
 
-                _this3.message = "";
+                _this2.message = "";
                 _context2.next = 11;
                 break;
 
@@ -2329,6 +2223,127 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     }
   }
 });
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/InboxPeople.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/InboxPeople.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
 /***/ }),
 
@@ -6963,7 +6978,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.container {\n    max-width: 1170px;\n    margin: auto;\n}\nimg {\n    max-width: 100%;\n}\n.inbox_people {\n    background: #f8f8f8 none repeat scroll 0 0;\n    float: left;\n    overflow: hidden;\n    width: 40%;\n    border-right: 1px solid #c4c4c4;\n}\n.inbox_msg {\n    border: 1px solid #c4c4c4;\n    clear: both;\n    overflow: hidden;\n}\n.top_spac {\n    margin: 20px 0 0;\n}\n.recent_heading {\n    float: left;\n    width: 40%;\n}\n.srch_bar {\n    display: inline-block;\n    text-align: right;\n    width: 60%;\n}\n.headind_srch {\n    padding: 10px 29px 10px 20px;\n    overflow: hidden;\n    border-bottom: 1px solid #c4c4c4;\n}\n.recent_heading h4 {\n    color: #05728f;\n    font-size: 21px;\n    margin: auto;\n}\n.srch_bar input {\n    border: 1px solid #cdcdcd;\n    border-width: 0 0 1px 0;\n    width: 80%;\n    padding: 2px 0 4px 6px;\n    background: none;\n}\n.srch_bar .input-group-addon button {\n    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;\n    border: medium none;\n    padding: 0;\n    color: #707070;\n    font-size: 18px;\n}\n.srch_bar .input-group-addon {\n    margin: 0 0 0 -27px;\n}\n.chat_ib h5 {\n    font-size: 15px;\n    color: #464646;\n    margin: 0 0 8px 0;\n}\n.chat_ib h5 span {\n    font-size: 13px;\n    float: right;\n}\n.chat_ib p {\n    font-size: 14px;\n    color: #989898;\n    margin: auto;\n}\n.chat_img {\n    float: left;\n    width: 11%;\n}\n.chat_ib {\n    float: left;\n    padding: 0 0 0 15px;\n    width: 88%;\n}\n.chat_people {\n    overflow: hidden;\n    clear: both;\n}\n.chat_list {\n    border-bottom: 1px solid #c4c4c4;\n    margin: 0;\n    padding: 18px 16px 10px;\n}\n.inbox_chat {\n    height: 550px;\n    overflow-y: scroll;\n}\n.active_chat {\n    background: #ebebeb;\n}\n.incoming_msg_img {\n    display: inline-block;\n    width: 6%;\n}\n.received_msg {\n    display: inline-block;\n    padding: 0 0 0 10px;\n    vertical-align: top;\n    width: 92%;\n}\n.received_withd_msg p {\n    background: #ebebeb none repeat scroll 0 0;\n    border-radius: 3px;\n    color: #646464;\n    font-size: 14px;\n    margin: 0;\n    padding: 5px 10px 5px 12px;\n    width: 100%;\n}\n.time_date,\n.user_name {\n    color: #747474;\n    display: inline-block;\n    font-size: 12px;\n    margin: 10px 5px 0 0;\n}\n.received_withd_msg {\n    width: 57%;\n}\n.mesgs {\n    float: left;\n    padding: 30px 15px 0 25px;\n    width: 60%;\n}\n.sent_msg p {\n    background: #05728f none repeat scroll 0 0;\n    border-radius: 3px;\n    font-size: 14px;\n    margin: 0;\n    color: #fff;\n    padding: 5px 10px 5px 12px;\n    width: 100%;\n}\n.outgoing_msg {\n    overflow: hidden;\n    margin: 26px 0 26px;\n}\n.sent_msg {\n    float: right;\n    width: 46%;\n}\n.input_msg_write input {\n    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;\n    color: #4c4c4c;\n    font-size: 15px;\n    padding: 5px 10px;\n    min-height: 48px;\n    width: 100%;\n    border-radius: 10px;\n    outline: none;\n}\n.type_msg {\n    position: relative;\n}\n.msg_send_btn {\n    background: #05728f none repeat scroll 0 0;\n    border: medium none;\n    border-radius: 50%;\n    color: #fff;\n    cursor: pointer;\n    font-size: 20px;\n    height: 40px;\n    position: absolute;\n    right: 5px;\n    top: 4px;\n    width: 40px;\n}\n.messaging {\n    padding: 0 0 50px 0;\n}\n.msg_history {\n    height: 516px;\n    overflow-y: auto;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.container {\n    max-width: 1170px;\n    margin: auto;\n}\nimg {\n    max-width: 100%;\n}\n.inbox_people {\n    background: #f8f8f8 none repeat scroll 0 0;\n    float: left;\n    overflow: hidden;\n    width: 40%;\n    border-right: 1px solid #c4c4c4;\n}\n.inbox_msg {\n    border: 1px solid #c4c4c4;\n    clear: both;\n    overflow: hidden;\n}\n.top_spac {\n    margin: 20px 0 0;\n}\n.recent_heading {\n    float: left;\n    width: 40%;\n}\n.srch_bar {\n    display: inline-block;\n    text-align: right;\n    width: 60%;\n}\n.headind_srch {\n    padding: 10px 29px 10px 20px;\n    overflow: hidden;\n    border-bottom: 1px solid #c4c4c4;\n}\n.recent_heading h4 {\n    color: #05728f;\n    font-size: 21px;\n    margin: auto;\n}\n.srch_bar input {\n    border: 1px solid #cdcdcd;\n    border-width: 0 0 1px 0;\n    width: 80%;\n    padding: 2px 0 4px 6px;\n    background: none;\n}\n.srch_bar .input-group-addon button {\n    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;\n    border: medium none;\n    padding: 0;\n    color: #707070;\n    font-size: 18px;\n}\n.srch_bar .input-group-addon {\n    margin: 0 0 0 -27px;\n}\n.chat_ib h5 {\n    font-size: 15px;\n    color: #464646;\n    margin: 0 0 8px 0;\n}\n.chat_ib h5 span {\n    font-size: 13px;\n    float: right;\n}\n.chat_ib p {\n    font-size: 14px;\n    color: #989898;\n    margin: auto;\n}\n.chat_img {\n    float: left;\n    width: 11%;\n}\n.chat_ib {\n    float: left;\n    padding: 0 0 0 15px;\n    width: 88%;\n}\n.chat_people {\n    overflow: hidden;\n    clear: both;\n}\n.chat_list {\n    border-bottom: 1px solid #c4c4c4;\n    margin: 0;\n    padding: 18px 16px 10px;\n}\n.inbox_chat {\n    height: 550px;\n    overflow-y: scroll;\n}\n.active_chat {\n    background: #ebebeb;\n}\n.incoming_msg_img {\n    display: inline-block;\n    width: 6%;\n}\n.received_msg {\n    display: inline-block;\n    padding: 0 0 0 10px;\n    vertical-align: top;\n    width: 92%;\n}\n.received_withd_msg p {\n    background: #ebebeb none repeat scroll 0 0;\n    border-radius: 3px;\n    color: #646464;\n    font-size: 14px;\n    margin: 0;\n    padding: 5px 10px 5px 12px;\n    width: 100%;\n}\n.time_date,\n.user_name {\n    color: #747474;\n    display: inline-block;\n    font-size: 12px;\n    margin: 10px 5px 0 0;\n}\n.received_withd_msg {\n    width: 57%;\n}\n.mesgs {\n    float: left;\n    padding: 30px 15px 0 25px;\n    /* width: 60%; */\n    width: 100%;\n}\n.sent_msg p {\n    background: #05728f none repeat scroll 0 0;\n    border-radius: 3px;\n    font-size: 14px;\n    margin: 0;\n    color: #fff;\n    padding: 5px 10px 5px 12px;\n    width: 100%;\n}\n.outgoing_msg {\n    overflow: hidden;\n    margin: 26px 0 26px;\n}\n.sent_msg {\n    float: right;\n    width: 46%;\n}\n.input_msg_write input {\n    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;\n    color: #4c4c4c;\n    font-size: 15px;\n    padding: 5px 10px;\n    min-height: 48px;\n    width: 100%;\n    border-radius: 10px;\n    outline: none;\n}\n.type_msg {\n    position: relative;\n}\n.msg_send_btn {\n    background: #05728f none repeat scroll 0 0;\n    border: medium none;\n    border-radius: 50%;\n    color: #fff;\n    cursor: pointer;\n    font-size: 20px;\n    height: 40px;\n    position: absolute;\n    right: 5px;\n    top: 4px;\n    width: 40px;\n}\n.messaging {\n    padding: 0 0 50px 0;\n}\n.msg_history {\n    height: 516px;\n    overflow-y: auto;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -40686,6 +40701,45 @@ component.options.__file = "resources/js/components/ChatLayout.vue"
 
 /***/ }),
 
+/***/ "./resources/js/components/InboxPeople.vue":
+/*!*************************************************!*\
+  !*** ./resources/js/components/InboxPeople.vue ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _InboxPeople_vue_vue_type_template_id_059b5d1a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./InboxPeople.vue?vue&type=template&id=059b5d1a& */ "./resources/js/components/InboxPeople.vue?vue&type=template&id=059b5d1a&");
+/* harmony import */ var _InboxPeople_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./InboxPeople.vue?vue&type=script&lang=js& */ "./resources/js/components/InboxPeople.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _InboxPeople_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _InboxPeople_vue_vue_type_template_id_059b5d1a___WEBPACK_IMPORTED_MODULE_0__.render,
+  _InboxPeople_vue_vue_type_template_id_059b5d1a___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/InboxPeople.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/components/MessageItem.vue":
 /*!*************************************************!*\
   !*** ./resources/js/components/MessageItem.vue ***!
@@ -40741,6 +40795,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/InboxPeople.vue?vue&type=script&lang=js&":
+/*!**************************************************************************!*\
+  !*** ./resources/js/components/InboxPeople.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_InboxPeople_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./InboxPeople.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/InboxPeople.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_InboxPeople_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
 /***/ "./resources/js/components/MessageItem.vue?vue&type=script&lang=js&":
 /*!**************************************************************************!*\
   !*** ./resources/js/components/MessageItem.vue?vue&type=script&lang=js& ***!
@@ -40787,6 +40857,23 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/InboxPeople.vue?vue&type=template&id=059b5d1a&":
+/*!********************************************************************************!*\
+  !*** ./resources/js/components/InboxPeople.vue?vue&type=template&id=059b5d1a& ***!
+  \********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_InboxPeople_vue_vue_type_template_id_059b5d1a___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_InboxPeople_vue_vue_type_template_id_059b5d1a___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_InboxPeople_vue_vue_type_template_id_059b5d1a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./InboxPeople.vue?vue&type=template&id=059b5d1a& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/InboxPeople.vue?vue&type=template&id=059b5d1a&");
+
+
+/***/ }),
+
 /***/ "./resources/js/components/MessageItem.vue?vue&type=template&id=606f219f&":
 /*!********************************************************************************!*\
   !*** ./resources/js/components/MessageItem.vue?vue&type=template&id=606f219f& ***!
@@ -40827,8 +40914,6 @@ var render = function() {
     _vm._v(" "),
     _c("div", { staticClass: "messaging" }, [
       _c("div", { staticClass: "inbox_msg" }, [
-        _vm._m(0),
-        _vm._v(" "),
         _c("div", { staticClass: "mesgs" }, [
           _c(
             "div",
@@ -40896,6 +40981,31 @@ var render = function() {
     ])
   ])
 }
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/InboxPeople.vue?vue&type=template&id=059b5d1a&":
+/*!***********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/InboxPeople.vue?vue&type=template&id=059b5d1a& ***!
+  \***********************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
 var staticRenderFns = [
   function() {
     var _vm = this
@@ -40941,14 +41051,14 @@ var staticRenderFns = [
             _c("div", { staticClass: "chat_ib" }, [
               _c("h5", [
                 _vm._v(
-                  "\n                                    Sunil Rajput\n                                    "
+                  "\n                        Sunil Rajput\n                        "
                 ),
                 _c("span", { staticClass: "chat_date" }, [_vm._v("Dec 25")])
               ]),
               _vm._v(" "),
               _c("p", [
                 _vm._v(
-                  "\n                                    Test, which is a new approach to have\n                                    all solutions astrology under one roof.\n                                "
+                  "\n                        Test, which is a new approach to have all solutions\n                        astrology under one roof.\n                    "
                 )
               ])
             ])
@@ -40969,14 +41079,14 @@ var staticRenderFns = [
             _c("div", { staticClass: "chat_ib" }, [
               _c("h5", [
                 _vm._v(
-                  "\n                                    Sunil Rajput\n                                    "
+                  "\n                        Sunil Rajput\n                        "
                 ),
                 _c("span", { staticClass: "chat_date" }, [_vm._v("Dec 25")])
               ]),
               _vm._v(" "),
               _c("p", [
                 _vm._v(
-                  "\n                                    Test, which is a new approach to have\n                                    all solutions astrology under one roof.\n                                "
+                  "\n                        Test, which is a new approach to have all solutions\n                        astrology under one roof.\n                    "
                 )
               ])
             ])
@@ -40997,14 +41107,14 @@ var staticRenderFns = [
             _c("div", { staticClass: "chat_ib" }, [
               _c("h5", [
                 _vm._v(
-                  "\n                                    Sunil Rajput\n                                    "
+                  "\n                        Sunil Rajput\n                        "
                 ),
                 _c("span", { staticClass: "chat_date" }, [_vm._v("Dec 25")])
               ]),
               _vm._v(" "),
               _c("p", [
                 _vm._v(
-                  "\n                                    Test, which is a new approach to have\n                                    all solutions astrology under one roof.\n                                "
+                  "\n                        Test, which is a new approach to have all solutions\n                        astrology under one roof.\n                    "
                 )
               ])
             ])
@@ -41025,14 +41135,14 @@ var staticRenderFns = [
             _c("div", { staticClass: "chat_ib" }, [
               _c("h5", [
                 _vm._v(
-                  "\n                                    Sunil Rajput\n                                    "
+                  "\n                        Sunil Rajput\n                        "
                 ),
                 _c("span", { staticClass: "chat_date" }, [_vm._v("Dec 25")])
               ]),
               _vm._v(" "),
               _c("p", [
                 _vm._v(
-                  "\n                                    Test, which is a new approach to have\n                                    all solutions astrology under one roof.\n                                "
+                  "\n                        Test, which is a new approach to have all solutions\n                        astrology under one roof.\n                    "
                 )
               ])
             ])
