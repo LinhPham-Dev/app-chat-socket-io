@@ -60,10 +60,9 @@ export default {
     created() {
         this.loadMessage();
         Echo.channel("ccccc").listen("MessagePosted", data => {
-            console.log("DCM");
-            // let message = data.message;
-            // message.user = data.user;
-            // this.list_messages.push(message);
+            let message = data.message;
+            message.user = data.user;
+            this.list_messages.push(message);
         });
     },
     methods: {
@@ -192,6 +191,10 @@ img {
 
 .active_chat {
     background: #ebebeb;
+}
+
+.incoming_msg {
+    margin: 15px 0;
 }
 
 .incoming_msg_img {
